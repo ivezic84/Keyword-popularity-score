@@ -1,12 +1,11 @@
 <?php
 
-
-namespace App\Service;
-
+namespace App\Service\Provider;
 
 use App\Entity\KeywordScore\KeywordScore;
 use App\Enum\KeywordType;
 use App\Enum\ProviderType;
+use App\Service\ProviderInterface;
 use App\Traits\ProviderTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use GuzzleHttp\Client;
@@ -19,9 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class GitHubServiceProvider implements ProviderInterface
 {
-
     use ProviderTrait;
-
 
     /** @var EntityManagerInterface $em */
     private $em;

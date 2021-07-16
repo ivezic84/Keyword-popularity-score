@@ -1,9 +1,10 @@
 <?php
 
 
-namespace App\Service;
+namespace App\Service\Provider;
 
 
+use App\Service\ProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 class TwitterServiceProvider implements ProviderInterface

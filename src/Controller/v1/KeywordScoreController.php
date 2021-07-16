@@ -13,7 +13,7 @@
 namespace App\Controller\v1;
 
 
-use App\Service\GitHubServiceProvider;
+use App\Service\Provider\GitHubServiceProvider;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
