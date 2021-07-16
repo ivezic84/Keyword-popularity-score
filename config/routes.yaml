@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+_v1:
+    resource: routes/v1.yaml
+    prefix: /v1/
+
+_v2:
+    resource: routes/v2.yaml
+    prefix: /v2/

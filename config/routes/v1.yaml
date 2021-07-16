@@ -1,0 +1,4 @@
+keyword_score:
+    path: /score
+    methods: ['GET']
+    controller: App\Controller\v1\KeywordScoreController:getScore
