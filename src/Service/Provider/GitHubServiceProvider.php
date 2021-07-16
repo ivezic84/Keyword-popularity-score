@@ -38,6 +38,13 @@ class GitHubServiceProvider implements ProviderInterface
 
         $keyword = $request->get('q');
 
+        if(!$keyword) {
+            return [
+                'status'  => 'error',
+                'message' => 'Not acceptable query',
+            ];
+        }
+
         /** @var KeywordScore $checkIfExist */
         $checkIfExist = $this->em->getRepository(KeywordScore::class)->findOneBy([
             'term'     => $keyword,

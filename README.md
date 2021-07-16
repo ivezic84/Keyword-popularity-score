@@ -35,6 +35,15 @@ Depending on you environment you need to setup Virtual host or start up the buil
 symfony serve
 ```
 
+Open APi is implemented in the project.
+
+```bash
+http://keyword-score.test/api/doc
+```
+
+
+Testing environment is Behat
+
 
 ## Example of usage
 
@@ -46,7 +55,7 @@ You only need to pass keyword.
 
 In this example keyword is php:
 ```bash
-http://keyword-score.test/v1/score?q=php
+http://keyword-score.test/api/v1/score?q=php
 ```
 
 

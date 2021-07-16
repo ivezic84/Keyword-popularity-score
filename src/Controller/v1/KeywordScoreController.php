@@ -12,9 +12,9 @@
 
 namespace App\Controller\v1;
 
-
 use App\Service\Provider\GitHubServiceProvider;
 use GuzzleHttp\Exception\GuzzleException;
+use OpenApi\Annotations as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +27,14 @@ class KeywordScoreController extends AbstractController
      * @param GitHubServiceProvider $gitHubServiceProvider
      * @return JsonResponse
      * @throws GuzzleException
+     * @OA\Response(
+     *     response=200,
+     *     description="Return score for the keyword in json format"
+     * )
+     * @OA\Parameter(
+     *     name="q",
+     *     in="query"
+     * )
      */
     public function getScore(Request $request, GitHubServiceProvider $gitHubServiceProvider): JsonResponse
     {

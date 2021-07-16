@@ -56,7 +56,7 @@ class FeatureContext implements Context
 
         $response = json_decode($this->response->getContent(), true);
 
-        return $score = $response['data']['score'];
+        return $response['data']['score'];
 
     }
 

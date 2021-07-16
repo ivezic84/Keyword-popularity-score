@@ -4,9 +4,12 @@
 namespace App\Entity\KeywordScore;
 
 use Doctrine\ORM\Mapping as ORM;
+use Nelmio\ApiDocBundle\Annotation\Model;
+use OpenApi\Annotations as OA;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\KeywordScore\KeywordScoreRepository")
+ * @Annotation()
  */
 class KeywordScore
 {
@@ -25,6 +28,7 @@ class KeywordScore
 
     /**
      * @ORM\Column(type="string", nullable=false)
+     * @OA\Property(type="string", maxLength=255)
      */
     private $term;
 

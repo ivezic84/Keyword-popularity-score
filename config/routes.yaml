@@ -1,7 +1,7 @@
 _v1:
     resource: routes/v1.yaml
-    prefix: /v1/
+    prefix: /api/v1/
 
 _v2:
     resource: routes/v2.yaml
-    prefix: /v2/
+    prefix: /api/v2/
